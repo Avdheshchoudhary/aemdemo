@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Calculator Component"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        
+        <items jcr:primaryType="nt:unstructured">
+            
+            <!-- Input 1 Field -->
+            <input1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="First Number"
+                name="./input1"
+                emptyText="Enter first number"/>
+                
+            <!-- Input 2 Field -->
+            <input2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Second Number"
+                name="./input2"
+                emptyText="Enter second number"/>
+                
+            <!-- Operation Selector Field -->
+            <operation
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                fieldLabel="Operation"
+                name="./operation"
+                emptyText="Select an operation">
+                <items jcr:primaryType="nt:unstructured">
+                    <add
+                        jcr:primaryType="nt:unstructured"
+                        text="+"
+                        value="+"/>
+                    <subtract
+                        jcr:primaryType="nt:unstructured"
+                        text="-"
+                        value="-"/>
+                    <multiply
+                        jcr:primaryType="nt:unstructured"
+                        text="*"
+                        value="*"/>
+                    <divide
+                        jcr:primaryType="nt:unstructured"
+                        text="/"
+                        value="/"/>
+                    <percent
+                        jcr:primaryType="nt:unstructured"
+                        text="%"
+                        value="%"/>
+                </items>
+            </operation>
+            
+        </items>
+    </content>
+    
+</jcr:root>
